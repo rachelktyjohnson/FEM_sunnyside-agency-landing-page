@@ -98,6 +98,10 @@ header .navigation-container nav a#btn-contact {
     padding: 10px 20px;
     background: white;
   }
+  header .navigation-container nav a#btn-contact:hover {
+    color: white;
+    background: #6ECEFF;
+  }
 }
 header .navigation-container nav:before {
   content: "◢";
@@ -205,6 +209,9 @@ main .feature-content a {
 @media (min-width: 600px) {
   main .feature-content a {
     font-size: 1.2rem;
+  }
+  main .feature-content a:hover:after {
+    opacity: 0.5;
   }
 }
 main .feature-content a:after {
@@ -324,14 +331,30 @@ main .imaged-content#imaged-content-2 {
   color: hsl(232deg, 10%, 55%);
   line-height: 1.6;
 }
+@media (min-width: 600px) {
+  #testimonials .testimonial p.client-words {
+    margin: 40px 0;
+    font-size: 1.05rem;
+  }
+}
 #testimonials .testimonial h5 {
   font-weight: 900;
   font-size: 1.3rem;
+}
+@media (min-width: 600px) {
+  #testimonials .testimonial h5 {
+    font-size: 1rem;
+  }
 }
 #testimonials .testimonial p.client-title {
   color: hsl(210deg, 4%, 67%);
   margin-top: 10px;
   font-size: 0.9rem;
+}
+@media (min-width: 600px) {
+  #testimonials .testimonial p.client-title {
+    font-size: 0.7rem;
+  }
 }
 
 #gallery {
@@ -377,8 +400,17 @@ footer .footer-links a {
   color: hsl(168deg, 34%, 41%);
   font-size: 1.2rem;
 }
+footer .footer-links a:hover {
+  color: white;
+}
 footer .social-media-links a {
   margin: 0 15px;
+}
+footer .social-media-links a svg {
+  fill: #2C7566;
+}
+footer .social-media-links a:hover svg {
+  fill: white;
 }
 
 /*# sourceMappingURL=style.css.map */
