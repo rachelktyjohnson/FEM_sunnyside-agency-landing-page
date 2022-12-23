@@ -25,14 +25,28 @@ header {
   align-items: center;
   padding: 35px 20px;
 }
+@media (min-width: 600px) {
+  header {
+    padding: 45px;
+    height: 800px;
+    background-image: url("images/desktop/image-header.jpg");
+    background-position: bottom;
+  }
+}
 header .navigation-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
   position: relative;
+  align-items: center;
 }
 header .navigation-container #open-menu {
   height: 20px;
+}
+@media (min-width: 600px) {
+  header .navigation-container #open-menu {
+    display: none;
+  }
 }
 header .navigation-container nav {
   position: absolute;
@@ -44,11 +58,32 @@ header .navigation-container nav {
   align-items: center;
   padding: 45px;
 }
+@media (min-width: 600px) {
+  header .navigation-container nav {
+    background: none;
+    position: relative;
+    top: 0;
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
+    width: auto;
+  }
+  header .navigation-container nav:before {
+    display: none;
+  }
+}
 header .navigation-container nav a {
   margin: 20px 0;
   text-decoration: none;
   color: hsl(232deg, 10%, 55%);
   font-size: 1.4rem;
+}
+@media (min-width: 600px) {
+  header .navigation-container nav a {
+    margin: 0 0 0 40px;
+    font-size: 0.8rem;
+    color: white;
+  }
 }
 header .navigation-container nav a#btn-contact {
   background: hsl(51deg, 100%, 49%);
@@ -57,6 +92,12 @@ header .navigation-container nav a#btn-contact {
   text-transform: uppercase;
   color: black;
   border-radius: 50px;
+}
+@media (min-width: 600px) {
+  header .navigation-container nav a#btn-contact {
+    padding: 10px 20px;
+    background: white;
+  }
 }
 header .navigation-container nav:before {
   content: "◢";
@@ -75,34 +116,84 @@ header h1 {
   color: white;
   font-size: 2.5rem;
 }
+@media (min-width: 600px) {
+  header h1 {
+    font-size: 5rem;
+    margin-bottom: 100px;
+  }
+}
 
 main {
   width: 100%;
+}
+@media (min-width: 600px) {
+  main #main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 main .feature-image {
   height: 310px;
   background-size: cover;
   background-position: center center;
 }
+@media (min-width: 600px) {
+  main .feature-image {
+    height: 600px;
+  }
+}
 main .feature-image#feature-image-1 {
   background-image: url("images/mobile/image-transform.jpg");
+}
+@media (min-width: 600px) {
+  main .feature-image#feature-image-1 {
+    background-image: url("images/desktop/image-transform.jpg");
+  }
 }
 main .feature-image#feature-image-2 {
   background-image: url("images/mobile/image-stand-out.jpg");
 }
+@media (min-width: 600px) {
+  main .feature-image#feature-image-2 {
+    background-image: url("images/desktop/image-stand-out.jpg");
+  }
+}
 main .feature-content {
   padding: 70px 30px;
   text-align: center;
+}
+main .feature-content#feature-content-1 {
+  order: -1;
+}
+@media (min-width: 600px) {
+  main .feature-content {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    justify-content: center;
+    text-align: left;
+    padding: 120px;
+  }
 }
 main .feature-content h2 {
   font-size: 2rem;
   font-weight: 900;
   color: hsl(212deg, 27%, 19%);
 }
+@media (min-width: 600px) {
+  main .feature-content h2 {
+    font-size: 3rem;
+  }
+}
 main .feature-content p {
   color: hsl(232deg, 10%, 55%);
   line-height: 1.8;
   margin: 40px 0;
+}
+@media (min-width: 600px) {
+  main .feature-content p {
+    font-size: 1.15rem;
+  }
 }
 main .feature-content a {
   text-transform: uppercase;
@@ -110,6 +201,11 @@ main .feature-content a {
   color: hsl(212deg, 27%, 19%);
   font-weight: 900;
   text-decoration: none;
+}
+@media (min-width: 600px) {
+  main .feature-content a {
+    font-size: 1.2rem;
+  }
 }
 main .feature-content a:after {
   content: "";
@@ -122,6 +218,12 @@ main .feature-content a:after {
   left: -5px;
   z-index: -1;
   opacity: 0.2;
+}
+@media (min-width: 600px) {
+  main .feature-content a:after {
+    width: 150px;
+    top: 13px;
+  }
 }
 main .feature-content#feature-content-1 a {
   position: relative;
@@ -144,6 +246,11 @@ main .imaged-content {
   flex-direction: column;
   padding: 65px 25px;
 }
+@media (min-width: 600px) {
+  main .imaged-content {
+    padding: 65px 200px;
+  }
+}
 main .imaged-content h3 {
   font-weight: 900;
   font-size: 1.7rem;
@@ -154,18 +261,45 @@ main .imaged-content p {
   font-size: 0.95rem;
   line-height: 1.4;
 }
+@media (min-width: 600px) {
+  main .imaged-content p {
+    font-size: 0.9rem;
+  }
+}
 main .imaged-content#imaged-content-1 {
   background-image: url("images/mobile/image-graphic-design.jpg");
   color: hsl(167deg, 40%, 24%);
+}
+@media (min-width: 600px) {
+  main .imaged-content#imaged-content-1 {
+    background-image: url("images/desktop/image-graphic-design.jpg");
+  }
 }
 main .imaged-content#imaged-content-2 {
   background-image: url("images/mobile/image-photography.jpg");
   color: hsl(198deg, 62%, 26%);
 }
+@media (min-width: 600px) {
+  main .imaged-content#imaged-content-2 {
+    background-image: url("images/desktop/image-photography.jpg");
+  }
+}
 
 #testimonials {
   text-align: center;
   padding: 65px 45px 20px;
+}
+@media (min-width: 600px) {
+  #testimonials {
+    padding: 170px;
+  }
+}
+@media (min-width: 600px) {
+  #testimonials .testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 45px;
+  }
 }
 #testimonials h4 {
   color: hsl(210deg, 4%, 67%);
@@ -175,6 +309,11 @@ main .imaged-content#imaged-content-2 {
 }
 #testimonials .testimonial {
   margin: 65px 0;
+}
+@media (min-width: 600px) {
+  #testimonials .testimonial {
+    margin: 65px 0 45px;
+  }
 }
 #testimonials .testimonial img {
   width: 70px;
@@ -200,6 +339,11 @@ main .imaged-content#imaged-content-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+@media (min-width: 600px) {
+  #gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 #gallery picture {
   line-height: 0;
 }
@@ -222,6 +366,11 @@ footer .footer-links {
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+@media (min-width: 600px) {
+  footer .footer-links {
+    width: 300px;
+  }
 }
 footer .footer-links a {
   text-decoration: none;
